@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Statistics - Crime Report Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Reset default browser styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4; /* Fallback color */
+            background-image: url('your-background-image.jpg'); /* Add your image path here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Header styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for navigation */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Section styles */
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for section */
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+        }
+        section h2 {
+            margin-top: 20px;
+        }
+        section p {
+            margin-bottom: 15px;
+        }
+        section ul {
+            margin-left: 20px;
+        }
+        section ul li {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for footer */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View Statistics</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="D:\crms\version4\homepage.html">Home</a></li>
+            <li><a href="D:\crms\version4\aboutpage.html">About Us</a></li>
+            <li><a href="D:\crms\version4\report a crime.html">Report a Crime</a></li>
+            <li><a href="D:\crms\version4\contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Crime Statistics</h2>
+        <canvas id="crimeChart" width="400" height="200"></canvas>
+        <p>Here you can view various statistics related to reported crimes, such as:</p>
+        <ul>
+            <li>Total number of reported crimes</li>
+            <li>Breakdown of crime types</li>
+            <li>Crime trends over time</li>
+            <li>Geographical distribution of crimes</li>
+        </ul>
+        <p>Statistics can provide valuable insights for law enforcement agencies, policymakers, and community organizations to make informed decisions and allocate resources effectively.</p>
+    </section>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <!-- Bootstrap JavaScript (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Chart.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript code to generate the crime statistics chart -->
+    <script>
+        // Sample data for the crime types breakdown
+        var crimeTypeData = {
+            labels: ['Theft', 'Assault', 'Burglary', 'Vandalism', 'Fraud'],
+            datasets: [{
+                label: 'Crime Types',
+                data: [300, 200, 150, 100, 50], // Sample data representing the number of reported crimes for each type
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Get the canvas element
+        var crimeChartCanvas = document.getElementById('crimeChart').getContext('2d');
+
+        // Create the chart using Chart.js
+        var crimeChart = new Chart(crimeChartCanvas, {
+            type: 'bar',
+            data: crimeTypeData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

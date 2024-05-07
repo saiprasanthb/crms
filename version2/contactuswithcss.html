@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Crime Report Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            width: 50%;
+            margin: auto;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="D:\crms\version2\homewithcss.html">Home</a></li>
+            <li><a href="D:\crms\version2\aboutpagewithcss.html">About Us</a></li>
+            <li><a href="D:\crms\version2\report a crime.html">Report a Crime</a></li>
+            <li><a href="D:\crms\version2\view statistics withcss.html">View Statistics</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>If you have any questions, concerns, or feedback, please feel free to reach out to us:</p>
+        <ul>
+            <li>Email: saiprasanthofficial0912@gmail.com</li>
+            <li>Phone: 9176209569</li>
+            <li>Address: 123 Main Street, City, State, ZIP</li>
+        </ul>
+        <p>You can also use the form below to send us a message:</p>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+</body>
+</html>

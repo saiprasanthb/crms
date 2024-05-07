@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report a Crime - Crime Report Management System</title>
+</head>
+<body>
+    <header>
+        <h1>Report a Crime</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="statistics.html">View Statistics</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Report Form</h2>
+        <form action="submit_report.php" method="post">
+            <label for="crime_type">Crime Type:</label>
+            <input type="text" id="crime_type" name="crime_type" required><br><br>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+</html>
